@@ -25,7 +25,7 @@ export interface Options {
 export interface CallReturn<T = any> {
   arguments: any[];
   _method: {
-    outputs: { name: string; type: string }[];
+    outputs: { name: string; type: string, components?: { name: string; type: string}[] }[];
   };
   _parent: {
     _address: string;
@@ -355,7 +355,10 @@ export class MultiCall {
               ? this.decodeHex(
                   data,
                   callReturn._method.outputs.length == 1
-                    ? callReturn._method.outputs[0].type
+                    ?(
+                      callReturn._method.outputs[0].type !== 'tuple' ? callReturn._method.outputs[0].type
+                      : callReturn._method.outputs[0].components.map(function (x) { return x.type; })
+                    )
                     : callReturn._method.outputs.map((x) => x.type)
                 )
               : undefined;

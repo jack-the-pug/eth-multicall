@@ -1,10 +1,19 @@
-# Eth-Multicall
+# Multicall.js
 
 Utilising the Ethereum Multi-call contract, this package helps engages with it by automatically flattening, encoding, decoding and un-flattening.
 
 ## Install
 
-    yarn add eth-multicall
+    yarn add multicall.js
+
+### Multicall Contract Addresses
+
+| Chain   | Address |
+| ------- | ------- |
+| Mainnet | [0xeefba1e63905ef1d7acba5a8513c70307c1ce441](https://etherscan.io/address/0xeefba1e63905ef1d7acba5a8513c70307c1ce441#contracts) |
+| BSC | [0xB94858b0bB5437498F5453A16039337e5Fdc269C](https://bscscan.com/address/0xB94858b0bB5437498F5453A16039337e5Fdc269C#contracts) |
+| Polygon | [0xa0ea094f5d9495f1e4bbe78799d27a34206e4e72](https://polygonscan.com/address/0xa0ea094f5d9495f1e4bbe78799d27a34206e4e72)
+
 
 ## Example
 
