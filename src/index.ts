@@ -357,9 +357,9 @@ export class MultiCall {
                   callReturn._method.outputs.length == 1
                     ?(
                       callReturn._method.outputs[0].type !== 'tuple' ? callReturn._method.outputs[0].type
-                      : callReturn._method.outputs[0].components.map(function (x) { return x.type; })
+                      : callReturn._method.outputs[0].components
                     )
-                    : callReturn._method.outputs.map((x) => x.type)
+                    : callReturn._method.outputs
                 )
               : undefined;
 
